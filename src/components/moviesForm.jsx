@@ -1,10 +1,17 @@
 import React from "react";
 
-class MoviesForm extends Component {
-  state = {};
-  render() {
-    return <h1>Movies Form</h1>;
-  }
-}
+const MoviesForm = ({ match, history }) => {
+  return (
+    <div>
+      <h1>Movies Form {match.params.id}</h1>
+      <button
+        className="btn btn-primary"
+        onClick={() => history.push("/movies")}
+      >
+        Save
+      </button>
+    </div>
+  );
+};
 
 export default MoviesForm;

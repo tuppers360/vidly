@@ -4,6 +4,7 @@ import { ToastContainer } from "react-toastify";
 import jwtDecode from "jwt-decode";
 import Customers from "./components/customers";
 import LoginForm from "./components/loginForm";
+import Logout from "./components/logout";
 import Movies from "./components/movies";
 import MoviesForm from "./components/moviesForm";
 import NavBar from "./components/navBar";
@@ -32,6 +33,7 @@ class App extends Component {
           <Switch>
             <Route path="/register" component={RegisterForm} />
             <Route path="/login" component={LoginForm} />
+            <Route path="/logout" component={Logout} />
             <Route path="/movies/:id" component={MoviesForm} />
             <Route path="/movies" component={Movies} />
             <Route path="/customers" component={Customers} />
